@@ -1,3 +1,13 @@
+Param(
+    [string]$Log="System",
+    [string]$computername = $env:COMPUTERNAME,
+    [int32]$Newest=500,
+    [string]$ReportTitle="Event Log Report",
+    [Parameter(Mandatory, HelpMessage= "Enter path for the HTML file.")]
+    [string]$Path
+)
+
+
 $computername = $env:COMPUTERNAME
 $data = Get-EventLog System -EntryType Error -Newest 1000 -ComputerName $ComputerName |
 Group -Property Source -NoElement
