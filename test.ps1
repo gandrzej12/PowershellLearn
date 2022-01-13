@@ -10,3 +10,9 @@ Write-Host "Setting `$x to $x" -ForegroundColor Green
 
 #comment? nice
 $x+$x
+
+<#
+multi
+lane
+comment
+#>
